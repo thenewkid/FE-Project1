@@ -1,5 +1,7 @@
 $(document).ready(function() {
+	fadeInDocument();
 	window.onresize();
+	$("#welcome_modal").modal();
 
 });
 
@@ -75,5 +77,11 @@ window.onresize = function() {
 	}
 	function getContainer() {
 		return document.getElementById("container");
+	}
+	function fadeInDocument() {
+		var body = document.body;
+		var container = $(body).children();
+		$(container).hide();
+		$(container).fadeIn(3000);
 	}
 
